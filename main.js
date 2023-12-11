@@ -124,43 +124,12 @@ extraRequirementCheckboxes.forEach(function (checkbox) {
 
 //initial function
 function init() {
-   
- bTotal = 0.00;
- advTotal = 0.00;
- oTotal = 0.00;
-
- 
- updateTableCell(totalCell_1, 'LKR ' + bTotal.toFixed(2));
- updateTableCell(totalCell_2, 'LKR ' + advTotal.toFixed(2));
- updateTableCell(overallTotalCell, 'LKR ' + oTotal.toFixed(2));
-
- 
- fnameInput.value = '';
- lnameInput.value = '';
- emailInput.value = '';
- contactInput.value = '';
-
- 
- branchInput.value = '';
- adultInput.value = '';
- kidInput.value = '';
- arrivalInput.value = '';
- depatureInput.value = '';
- singleBedRoomInput.value = '';
- doubleBedRoomInput.value = '';
- tripleBedRoomInput.value = '';
- extraBedInput.checked = false;
- promoCodeInput.value = '';
-
- 
- advBranchInput.value = '';
- advTypeInput.value = '';
- foreignAdultsInput.value = '';
- foreignKidsInput.value = '';
- localAdultsInput.value = '';
- localKidsInput.value = '';
- guideInput.checked = false;
- advDurationInput.value = '';
+    bTotal = 0.00;
+    advTotal = 0.00;
+    oTotal = 0.00;
+    updateTableCell(totalCell_1,'LKR ' + bTotal.toFixed(2));
+    updateTableCell(totalCell_2,'LKR ' + advTotal.toFixed(2));
+    updateTableCell(overallTotalCell,'LKR ' + oTotal.toFixed(2));
 }
 
 //function that updates cells for the outputs
@@ -434,6 +403,7 @@ function reserveRoom(event){
     } else{
         clearRoomCells();
         init();
+        theForm.reset();
         overallTable.style.display = 'block';
         emptyDiv.style.display = 'block';
         returnToTop.style.display = 'block';
@@ -495,6 +465,7 @@ function reserveAdv(event){
     } else {
         clearRoomCells();
         init();
+        theForm.reset();
         emptyDiv.style.display = 'none';
         overallTable.style.display = 'none';
         returnToTop.style.display = 'none';
